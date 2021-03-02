@@ -1,15 +1,28 @@
 input.onButtonPressed(Button.A, function () {
-    datetime = "" + years.toString() + "/" + months.toString() + "/" + days.toString() + " " + hours.toString() + ":" + minutes.toString() + ":" + seconds.toString()
-    basic.showString(datetime)
+    basic.showNumber(years)
+    basic.showString("-")
+    basic.showNumber(months)
+    basic.showString("-")
+    basic.showNumber(days)
+    basic.clearScreen()
 })
-let datetime = ""
-let hours = 0
-let minutes = 0
+input.onButtonPressed(Button.B, function () {
+    basic.showNumber(hours)
+    basic.showString(":")
+    basic.showNumber(minutes)
+    basic.showString(":")
+    basic.showNumber(seconds)
+    basic.clearScreen()
+})
 let seconds = 0
-let days = 1
-let months = 1
-let years = 2020
-datetime = "null"
+let minutes = 0
+let hours = 0
+let years = 0
+let months = 0
+let days = 0
+days = 1
+months = 1
+years = 2021
 basic.forever(function () {
     basic.pause(1000)
     seconds += 1
