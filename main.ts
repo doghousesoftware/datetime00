@@ -14,12 +14,15 @@ input.onButtonPressed(Button.B, function () {
     basic.showNumber(seconds)
     basic.clearScreen()
 })
-let seconds = 0
-let minutes = 0
-let hours = 0
 let years = 0
 let months = 0
 let days = 0
+let hours = 0
+let minutes = 0
+let seconds = 0
+seconds = 22
+minutes = 59
+hours = 23
 days = 1
 months = 1
 years = 2021
@@ -34,7 +37,7 @@ basic.forever(function () {
         minutes = 0
         hours += 1
     }
-    if (hours > 24) {
+    if (hours > 23) {
         hours = 0
         days += 1
     }
