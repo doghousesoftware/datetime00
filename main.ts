@@ -23,8 +23,8 @@ let seconds = 0
 seconds = 22
 minutes = 59
 hours = 23
-days = 1
-months = 1
+days = 30
+months = 12
 years = 2021
 basic.forever(function () {
     basic.pause(1000)
@@ -42,7 +42,7 @@ basic.forever(function () {
         days += 1
     }
     if (days > 30) {
-        days += 1
+        days = 1
         months += 1
     }
     if (months > 12) {
